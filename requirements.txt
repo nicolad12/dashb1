@@ -1,3 +1,1 @@
-plotly
-plotly.express
-plotly.graph_objects
+plotly==5.14.1
