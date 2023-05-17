@@ -37,9 +37,10 @@ df = load_data(st.secrets["public_gsheets_url"])
 # -- Apply the year filter given by the user
 res = calendar.monthrange(year_choice, month_choice)[1]
 date = datetime.date(year_choice,month_choice,res)
-df['Status Date']=df['Status Date'].dt.strftime('%d/%m/%Y')
+df['Status Date']=df['Status Date']
 filtered_df = df[df['Status Date'] == date]
 
+st.write(type(df['Status Date'])
 
 # -- Create the figure in Plotly
 fig = go.Figure()
