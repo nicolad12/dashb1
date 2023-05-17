@@ -40,7 +40,7 @@ date = datetime.date(year_choice,month_choice,res)
 df['Status Date']=df['Status Date']
 filtered_df = df[df['Status Date'] == date]
 
-st.write(type(df['Status Date'])
+st.write(type(df['Status Date']))
 
 # -- Create the figure in Plotly
 fig = go.Figure()
