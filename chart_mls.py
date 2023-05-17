@@ -56,7 +56,7 @@ fig.add_trace(go.Scatter(x=filtered_df["Baseline"], y=filtered_df["Milestone No.
 
 fig.add_trace(go.Scatter(x=filtered_df["Actual"], y=filtered_df["Milestone No."], name = 'Actual',
                          line=dict(color='green', width=1,dash='dot'), marker_symbol="diamond"))
-z = filtered_df['Variance']
+#z = filtered_df['Variance']
 
 fig.update_traces(hovertemplate= "Mls No. : %{y} , Date: %{x}")
 #fig.update_traces(texttemplate="Mls No. :", selector=dict(type='scatter'))
