@@ -43,7 +43,7 @@ filtered_df = df[df['Status Date'] == str(date)]
 # -- Create the figure in Plotly
 fig = go.Figure()
 
-fig.add_trace(go.Scatter(x=filtered_df["Forecast"], y=filtered_df["Milestone No."], name = 'Forecast',
+fig.add_trace(go.Scatter(x=str(filtered_df["Forecast"]), y=filtered_df["Milestone No."], name = 'Forecast',
                          line=dict(color='royalblue', width=1),marker_symbol="square"))
 fig.update_traces(text=filtered_df["Milestone No."], mode='lines+markers+text')
 
