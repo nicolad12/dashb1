@@ -69,8 +69,7 @@ fig.add_trace(go.Scatter(x=filtered_df["Status Date"], y=filtered_df["Milestone 
 fig.update_layout(title='', xaxis_title='Timeline', yaxis_title='Milestone No.')
 
 # -- Input the Plotly chart to the Streamlit interface
-col3 = st.columns(50)
-with col3:
-    st.plotly_chart(fig, use_container_width=True)
+st.columns(50)
+st.plotly_chart(fig, use_container_width=True)
 
-    AgGrid(filtered_df)
+AgGrid(filtered_df)
