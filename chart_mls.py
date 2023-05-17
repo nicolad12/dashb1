@@ -32,10 +32,6 @@ def load_data(sheets_url):
 
 df = load_data(st.secrets["public_gsheets_url"])
 
-# Print results.
-for row in df.itertuples():
-    st.write(f"{row.name} has a :{row.pet}:")
-
 # -- Apply the year filter given by the user
 res = calendar.monthrange(year_choice, month_choice)[1]
 date = datetime.date(year_choice,month_choice,res)
