@@ -25,8 +25,6 @@ year_choice = st.slider(
         value=2022,
     )
 
-sheets_url='https://docs.google.com/spreadsheets/d/1VVjVXYmnDr20f1FjXNYBtglFrPTlJvAu/edit?usp=sharing&ouid=105566543575107705244&rtpof=true&sd=true'
-
 def load_data(sheets_url):
     csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
     return pd.read_csv(csv_url)
