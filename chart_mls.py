@@ -8,7 +8,7 @@ from st_aggrid import AgGrid
 
  
 #-- Create three columns
-st.title("Key Milestones Time Chart")
+st.title("Project #1 - Key Milestones Time Chart")
 col1, col2 = st.columns([30, 30])
 with col1:
     month_choice = st.slider(
@@ -69,7 +69,6 @@ fig.add_trace(go.Scatter(x=filtered_df["Status Date"], y=filtered_df["Milestone 
 fig.update_layout(title='', xaxis_title='Timeline', yaxis_title='Milestone No.')
 
 # -- Input the Plotly chart to the Streamlit interface
-st.columns(50)
 st.plotly_chart(fig, use_container_width=True)
 
-AgGrid(filtered_df)
+AgGrid(filtered_df, width=50, columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS)
