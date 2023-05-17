@@ -9,7 +9,7 @@ from st_aggrid import AgGrid
  
 #-- Create three columns
 st.title("Key Milestones Time Chart")
-col1, col2, col3 = st.columns([10, 10, 50])
+col1, col2 = st.columns([30, 30])
 with col1:
     month_choice = st.slider(
         "What month would you like to view?",
