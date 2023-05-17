@@ -8,7 +8,7 @@ from st_aggrid import AgGrid, ColumnsAutoSizeMode
 
  
 #-- Create three columns
-st.title("Project #1 - Key Milestones Time Chart")
+st.title("Project #1 - Key Milestones Chart")
 col1, col2 = st.columns([30, 30])
 with col1:
     month_choice = st.slider(
