@@ -11,7 +11,7 @@ from st_aggrid import AgGrid
 st.title("Key Milestones Time Chart")
 col1, col2, col3 = st.columns([10, 10, 50])
 with col1:
-month_choice = st.slider(
+    month_choice = st.slider(
         "What month would you like to view?",
         min_value=6,
         max_value=12,
@@ -19,7 +19,7 @@ month_choice = st.slider(
         value=6,
     )   
 with col2:
-year_choice = st.slider(
+    year_choice = st.slider(
         "What year would you like to view?",
         min_value=2022,
         max_value=2026,
@@ -70,6 +70,6 @@ fig.update_layout(title='', xaxis_title='Timeline', yaxis_title='Milestone No.')
 
 # -- Input the Plotly chart to the Streamlit interface
 with col3:
-st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
 
-AgGrid(filtered_df)
+    AgGrid(filtered_df)
