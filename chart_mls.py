@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import datetime
 import calendar
-from st_aggrid import AgGrid
+from st_aggrid import AgGrid, ColumnsAutoSizeMode
 
  
 #-- Create three columns
