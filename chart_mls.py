@@ -31,7 +31,7 @@ def load_data(sheets_url):
     csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
     return pd.read_csv(csv_url)
 
-df = load_data(st.secrets["public_gsheets_url"]
+df = load_data(st.secrets["public_gsheets_url"])
 
 # -- Apply the year filter given by the user
 res = calendar.monthrange(year_choice, month_choice)[1]
