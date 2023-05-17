@@ -4,6 +4,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 import datetime
 import calendar
+from st_aggrid import AgGrid
+
  
 #-- Create three columns
 col1, col2, col3 = st.columns([5, 10, 20])
@@ -72,3 +74,5 @@ fig.update_layout(title='', xaxis_title='Timeline', yaxis_title='Milestone No.')
 
 # -- Input the Plotly chart to the Streamlit interface
 st.plotly_chart(fig, use_container_width=True)
+
+AgGrid(filtered_df)
