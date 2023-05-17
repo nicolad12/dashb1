@@ -38,7 +38,7 @@ df = load_data(st.secrets["public_gsheets_url"])
 res = calendar.monthrange(year_choice, month_choice)[1]
 date = datetime.date(year_choice,month_choice,res)
 df['Status Date']=pd.to_datetime(df['Status Date'], format= '%d/%m/%Y')
-filtered_df = df[df['Status Date'] == date]
+filtered_df = df[df['Status Date'] == pd.to_datetime(date)]
 
 st.write(type(df['Status Date'][0]))
 
