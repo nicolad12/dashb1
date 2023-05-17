@@ -71,4 +71,4 @@ fig.update_layout(title='', xaxis_title='Timeline', yaxis_title='Milestone No.')
 # -- Input the Plotly chart to the Streamlit interface
 st.plotly_chart(fig, use_container_width=True)
 
-AgGrid(filtered_df, width=50, columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS)
+AgGrid(filtered_df, height=350, width='50', columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS) 
