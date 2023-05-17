@@ -37,13 +37,14 @@ df = load_data(st.secrets["public_gsheets_url"])
 # -- Apply the year filter given by the user
 res = calendar.monthrange(year_choice, month_choice)[1]
 date = datetime.date(year_choice,month_choice,res)
+df['Status Date']=str(df['Status Date']
 filtered_df = df[df['Status Date'] == str(date)]
 
 
 # -- Create the figure in Plotly
 fig = go.Figure()
 
-fig.add_trace(go.Scatter(x=str(filtered_df["Forecast"]), y=filtered_df["Milestone No."], name = 'Forecast',
+fig.add_trace(go.Scatter(x=filtered_df["Forecast"], y=filtered_df["Milestone No."], name = 'Forecast',
                          line=dict(color='royalblue', width=1),marker_symbol="square"))
 fig.update_traces(text=filtered_df["Milestone No."], mode='lines+markers+text')
 
