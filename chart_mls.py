@@ -131,6 +131,10 @@ datasetWithFilters = [
     for country in countries
 ]
 
+squareofNum = "function f(x) {return x*x;}"
+
+result = js2py.eval_js(squareofNum)
+
 seriesList = [
     {
         "type": "line",
@@ -139,7 +143,7 @@ seriesList = [
         "name": country,
         "endLabel": {
             "show": True,
-            "formatter": "function (params) { return params.value[3] + ': ' + params.value[0];}".eval_js,
+            "formatter": js2py.eval_js("function (params) { return params.value[3] + ': ' + params.value[0];}"),
         },
         "labelLayout": {"moveOverlap": "shiftY"},
         "emphasis": {"focus": "series"},
