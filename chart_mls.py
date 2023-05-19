@@ -164,7 +164,7 @@ options3 = {
     "grid": {"right": 140},
     "series": seriesList,
 }
-st_echarts(options3, height="600px")
+st_echarts(options3, height="300px")
     
 #-- Create three columns
 st.title("Project #1 - Key Milestones Chart")
