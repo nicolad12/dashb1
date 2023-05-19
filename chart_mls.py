@@ -7,7 +7,6 @@ import calendar
 from st_aggrid import AgGrid, ColumnsAutoSizeMode
 from streamlit_echarts import st_echarts
 import json
-import js
 
 with st.sidebar:
     st.write("hello")
@@ -139,7 +138,9 @@ seriesList = [
         "name": country,
         "endLabel": {
             "show": True,
-            "formatter": [country,"Income"]
+            "formatter": st_echarts.JsCode(
+                "function (params) { return params.value[3] + ': ' + params.value[0];}"
+            ).js_code,
         },
         "labelLayout": {"moveOverlap": "shiftY"},
         "emphasis": {"focus": "series"},
