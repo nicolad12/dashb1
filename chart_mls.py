@@ -176,12 +176,12 @@ option3 = {
                 {"name": "3", "x": 550, "y": 100},
                 {"name": "4", "x": 550, "y": 500},
             ],
-      z: 20
+      "z": 20
     },
     {
-      type: 'heatmap',
+      "type": 'heatmap',
       "coordinateSystem": 'calendar',
-      "data": getVirtualData('2017')
+      "data": [2023-02-01, 2023-05-21]
     }
   ]
 }
