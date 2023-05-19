@@ -3,3 +3,4 @@ streamlit-aggrid
 datetime
 streamlit-echarts
 js2py
+js
