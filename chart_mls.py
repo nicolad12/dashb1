@@ -97,7 +97,7 @@ option2 = {
 }
 st_echarts(option2, height="500px")
 
-with open("./life-expectancy-table.json") as f:
+with open("./life-expectancy.json") as f:
     raw_data = json.load(f)
 countries = [
     "Finland",
