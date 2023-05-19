@@ -7,7 +7,7 @@ import calendar
 from st_aggrid import AgGrid, ColumnsAutoSizeMode
 from streamlit_echarts import st_echarts
 import json
-import js2py
+import js
 
 with st.sidebar:
     st.write("hello")
