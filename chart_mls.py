@@ -97,6 +97,12 @@ option2 = {
 }
 st_echarts(option2, height="500px")
 
+def get_virtual_data(year):
+    date_list = pd.date_range(
+        start=f"{year}-01-01", end=f"{year + 1}-01-01", freq="D"
+    )
+    return [[d.strftime("%Y-%m-%d"), randint(1, 10000)] for d in date_list]
+
 option3 = {
     "tooltip": {"position": "top"},
     "visualMap": {
