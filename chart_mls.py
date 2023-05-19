@@ -97,46 +97,72 @@ option2 = {
 }
 st_echarts(option2, height="500px")
 
-def get_virtual_data(year):
-    date_list = pd.date_range(start=f"{year}-01-01", end=f"{year + 1}-01-01", freq="D")
-    return [[d.strftime("%Y-%m-%d"), randint(1, 10000)] for d in date_list]
-
 option3 = {
-    "tooltip": {"position": "top"},
-    "visualMap": {
-        "min": 0,
-        "max": 10000,
-        "calculable": True,
-        "orient": "horizontal",
-        "left": "center",
-        "top": "top",
+  tooltip: {},
+  calendar: {
+    top: 'middle',
+    left: 'center',
+    orient: 'vertical',
+    cellSize: 40,
+    yearLabel: {
+      margin: 50,
+      fontSize: 30
     },
-    "calendar": [
-        {"range": "2020", "cellSize": ["auto", 20]},
-        {"top": 260, "range": "2019", "cellSize": ["auto", 20]},
-        {"top": 450, "range": "2018", "cellSize": ["auto", 20], "right": 5},
-    ],
-    "series": [
-        {
-            "type": "heatmap",
-            "coordinateSystem": "calendar",
-            "calendarIndex": 0,
-            "data": get_virtual_data(2020),
-        },
-        {
-            "type": "heatmap",
-            "coordinateSystem": "calendar",
-            "calendarIndex": 1,
-            "data": get_virtual_data(2019),
-        },
-        {
-            "type": "heatmap",
-            "coordinateSystem": "calendar",
-            "calendarIndex": 2,
-            "data": get_virtual_data(2018),
-        },
-    ],
+    dayLabel: {
+      firstDay: 1,
+      nameMap: 'cn'
+    },
+    monthLabel: {
+      nameMap: 'cn',
+      margin: 15,
+      fontSize: 20,
+      color: '#999'
+    },
+    range: ['2017-02', '2017-03-31']
+  },
+  visualMap: {
+    min: 0,
+    max: 1000,
+    type: 'piecewise',
+    left: 'center',
+    bottom: 20,
+    inRange: {
+      color: ['#5291FF', '#C7DBFF']
+    },
+    seriesIndex: [1],
+    orient: 'horizontal'
+  },
+  series: [
+    {
+      type: 'graph',
+      edgeSymbol: ['none', 'arrow'],
+      coordinateSystem: 'calendar',
+      links: links,
+      symbolSize: 15,
+      calendarIndex: 0,
+      itemStyle: {
+        color: 'yellow',
+        shadowBlur: 9,
+        shadowOffsetX: 1.5,
+        shadowOffsetY: 3,
+        shadowColor: '#555'
+      },
+      lineStyle: {
+        color: '#D10E00',
+        width: 1,
+        opacity: 1
+      },
+      data: graphData,
+      z: 20
+    },
+    {
+      type: 'heatmap',
+      coordinateSystem: 'calendar',
+      data: getVirtualData('2017')
+    }
+  ]
 }
+
 st_echarts(option3, height="640px", key="echarts") 
 
     
