@@ -1,3 +1,4 @@
 plotly==5.14.1
 streamlit-aggrid
 datetime
+streamlit-echarts
