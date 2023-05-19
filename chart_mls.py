@@ -97,7 +97,45 @@ option2 = {
 }
 st_echarts(option2, height="500px")
 
- 
+option3 = {
+    "tooltip": {"position": "top"},
+    "visualMap": {
+        "min": 0,
+        "max": 10000,
+        "calculable": True,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+    },
+    "calendar": [
+        {"range": "2020", "cellSize": ["auto", 20]},
+        {"top": 260, "range": "2019", "cellSize": ["auto", 20]},
+        {"top": 450, "range": "2018", "cellSize": ["auto", 20], "right": 5},
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "calendarIndex": 0,
+            "data": get_virtual_data(2020),
+        },
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "calendarIndex": 1,
+            "data": get_virtual_data(2019),
+        },
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "calendarIndex": 2,
+            "data": get_virtual_data(2018),
+        },
+    ],
+}
+st_echarts(option3, height="640px", key="echarts") 
+
+    
 #-- Create three columns
 st.title("Project #1 - Key Milestones Chart")
 col1, col2 = st.columns([30, 30])
