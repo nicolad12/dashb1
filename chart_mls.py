@@ -69,7 +69,7 @@ options1 = {
 
 st_echarts(options=options1, height="500px")
 
-option2 = {
+options2 = {
     "title": {"text": "Project"},
     "legend": {"data": ["Allocated Budget", "Actual Spending"]},
     "radar": {
@@ -99,7 +99,7 @@ option2 = {
         }
     ],
 }
-st_echarts(option2, height="500px")
+st_echarts(options2, height="500px")
 
 with open("./life-expectancy.json") as f:
     raw_data = json.load(f)
@@ -154,7 +154,7 @@ seriesList = [
     for country in countries
 ]
 
-option3 = {
+options3 = {
     "animationDuration": 100,
     "dataset": [{"id": "dataset_raw", "source": raw_data}] + datasetWithFilters,
     "title": {"text": "Income in Europe since 1950"},
@@ -164,7 +164,7 @@ option3 = {
     "grid": {"right": 140},
     "series": seriesList,
 }
-st_echarts(options=option3, height="600px")
+st_echarts(options3, height="600px")
     
 #-- Create three columns
 st.title("Project #1 - Key Milestones Chart")
