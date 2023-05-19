@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import datetime
 import calendar
 from st_aggrid import AgGrid, ColumnsAutoSizeMode
-from streamlit_echarts import st_echarts, streamlit_echarts.JsCode
+from streamlit_echarts import st_echarts, JsCode
 import json
 
 with st.sidebar:
