@@ -136,10 +136,10 @@ seriesList = [
         "type": "line",
         "datasetId": f"dataset_{country}",
         "showSymbol": False,
-        "name": [country,"Year"],
+        "name": country,
         "endLabel": {
             "show": True,
-            "formatter": country
+            "formatter": [country,"Income"]
         },
         "labelLayout": {"moveOverlap": "shiftY"},
         "emphasis": {"focus": "series"},
