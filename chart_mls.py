@@ -141,7 +141,7 @@ seriesList = [
             "show": True,
             "formatter": JsCode(
                 "function (params) { return params.value[3] + ': ' + params.value[0];}"
-            ).js_code,
+            ).to_js,
         },
         "labelLayout": {"moveOverlap": "shiftY"},
         "emphasis": {"focus": "series"},
