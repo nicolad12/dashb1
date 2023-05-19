@@ -98,67 +98,67 @@ option2 = {
 st_echarts(option2, height="500px")
 
 option3 = {
-  tooltip: {"text":"calendar"},
-  calendar: {
-    top: 'middle',
-    left: 'center',
-    orient: 'vertical',
-    cellSize: 40,
-    yearLabel: {
-      margin: 50,
-      fontSize: 30
+  "tooltip": {"text":"calendar"},
+  "calendar": {
+    "top": 'middle',
+    "left": 'center',
+    "orient": 'vertical',
+    "cellSize": 40,
+    "yearLabel": {
+      "margin": 50,
+      "fontSize": 30
     },
-    dayLabel: {
-      firstDay: 1,
-      nameMap: 'cn'
+    "dayLabel": {
+      "firstDay": 1,
+      "nameMap": 'cn'
     },
-    monthLabel: {
-      nameMap: 'cn',
-      margin: 15,
-      fontSize: 20,
-      color: '#999'
+    "monthLabel": {
+      "nameMap": 'cn',
+      "margin": 15,
+      "fontSize": 20,
+      "color": '#999'
     },
-    range: ['2017-02', '2017-03-31']
+    "range": ['2017-02', '2017-03-31']
   },
-  visualMap: {
-    min: 0,
-    max: 1000,
-    type: 'piecewise',
-    left: 'center',
-    bottom: 20,
-    inRange: {
-      color: ['#5291FF', '#C7DBFF']
+  "visualMap": {
+    "min": 0,
+    "max": 1000,
+    "type": 'piecewise',
+    "left": 'center',
+    "bottom": 20,
+    "inRange": {
+      "color": ['#5291FF', '#C7DBFF']
     },
-    seriesIndex: [1],
-    orient: 'horizontal'
+    "seriesIndex": [1],
+    "orient": 'horizontal'
   },
-  series: [
+  "series": [
     {
-      type: 'graph',
-      edgeSymbol: ['none', 'arrow'],
-      coordinateSystem: 'calendar',
-      links: links,
-      symbolSize: 15,
-      calendarIndex: 0,
-      itemStyle: {
-        color: 'yellow',
-        shadowBlur: 9,
-        shadowOffsetX: 1.5,
-        shadowOffsetY: 3,
-        shadowColor: '#555'
+      "type": 'graph',
+      "edgeSymbol": ['none', 'arrow'],
+      "coordinateSystem": 'calendar',
+      "links": links,
+      "symbolSize": 15,
+      "calendarIndex": 0,
+      "itemStyle": {
+        "color": 'yellow',
+        "shadowBlur": 9,
+        "shadowOffsetX": 1.5,
+        "shadowOffsetY": 3,
+        "shadowColor": '#555'
       },
-      lineStyle: {
-        color: '#D10E00',
-        width: 1,
-        opacity: 1
+      "lineStyle": {
+        "color": '#D10E00',
+        "width": 1,
+        "opacity": 1
       },
-      data: graphData,
+      "data": graphData,
       z: 20
     },
     {
       type: 'heatmap',
-      coordinateSystem: 'calendar',
-      data: getVirtualData('2017')
+      "coordinateSystem": 'calendar',
+      "data": getVirtualData('2017')
     }
   ]
 }
