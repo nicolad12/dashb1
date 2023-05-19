@@ -181,7 +181,7 @@ option3 = {
     {
       "type": 'heatmap',
       "coordinateSystem": 'calendar',
-      "data": [2023-02-01, 2023-05-21]
+      "data": ['2023-02-01', '2023-05-21']
     }
   ]
 }
