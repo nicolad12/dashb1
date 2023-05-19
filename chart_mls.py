@@ -70,7 +70,7 @@ st_echarts(options=options1, height="500px")
 
 options2 = {
     "title": {"text": "Project"},
-    "tooltip": ["Allocated Budget","Actual Spending"],
+    "tooltip": {"Allocated Budet":"data"},
     "legend": {"data": ["Allocated Budget", "Actual Spending"]},
     "radar": {
         "indicator": [
