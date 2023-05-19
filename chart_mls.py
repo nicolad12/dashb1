@@ -137,7 +137,25 @@ option3 = {
       "type": 'graph',
       "edgeSymbol": ['none', 'arrow'],
       "coordinateSystem": 'calendar',
-      "links": links,
+      "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "symbolSize": [5, 20],
+                    "label": {"show": True},
+                    "lineStyle": {"width": 5, "curveness": 0.2},
+                },
+                {
+                    "source": "2",
+                    "target": "1",
+                    "label": {"show": True},
+                    "lineStyle": {"curveness": 0.2},
+                },
+                {"source": "1", "target": "3"},
+                {"source": "2", "target": "3"},
+                {"source": "2", "target": "4"},
+                {"source": "1", "target": "4"},
+            ],
       "symbolSize": 15,
       "calendarIndex": 0,
       "itemStyle": {
@@ -152,7 +170,12 @@ option3 = {
         "width": 1,
         "opacity": 1
       },
-      "data": graphData,
+      "data": [
+                {"name": "1", "x": 300, "y": 300},
+                {"name": "2", "x": 800, "y": 300},
+                {"name": "3", "x": 550, "y": 100},
+                {"name": "4", "x": 550, "y": 500},
+            ],
       z: 20
     },
     {
