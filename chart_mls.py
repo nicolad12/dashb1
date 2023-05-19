@@ -10,7 +10,7 @@ import json
 import js2py
 
 with st.sidebar:
-    st.write(greeting="hello")
+    st.write("hello")
     
 options1 = {
     "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
@@ -139,7 +139,7 @@ seriesList = [
         "name": country,
         "endLabel": {
             "show": True,
-            "formatter": "function (params) { return params.value[3] + ': ' + params.value[0];}",
+            "formatter": "function (params) { return params.value[3] + ': ' + params.value[0];}".eval_js,
         },
         "labelLayout": {"moveOverlap": "shiftY"},
         "emphasis": {"focus": "series"},
@@ -164,7 +164,7 @@ options3 = {
     "grid": {"right": 140},
     "series": seriesList,
 }
-st_echarts(options3, height="300px")
+st_echarts(options3, height="600px")
     
 #-- Create three columns
 st.title("Project #1 - Key Milestones Chart")
