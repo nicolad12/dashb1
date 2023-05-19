@@ -136,7 +136,7 @@ seriesList = [
         "type": "line",
         "datasetId": f"dataset_{country}",
         "showSymbol": False,
-        "name": country,
+        "name": [country,"Year"],
         "endLabel": {
             "show": True,
             "formatter": country
