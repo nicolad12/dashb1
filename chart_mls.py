@@ -98,7 +98,7 @@ option2 = {
 st_echarts(option2, height="500px")
 
 option3 = {
-  tooltip: {},
+  tooltip: {"text":"calendar"},
   calendar: {
     top: 'middle',
     left: 'center',
