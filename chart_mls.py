@@ -7,7 +7,7 @@ import calendar
 from st_aggrid import AgGrid, ColumnsAutoSizeMode
 from streamlit_echarts import st_echarts
 
-options = {
+options1 = {
     "xAxis": {
         "type": "category",
         "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
@@ -17,7 +17,20 @@ options = {
         {"data": [820, 932, 901, 934, 1290, 1330, 1320], "type": "line"}
     ],
 }
-st_echarts(options=options)
+st_echarts(options=options1)
+
+with open("USA.json", "r") as f:
+    map = Map(
+        "USA",
+        json.loads(f.read()),
+        {
+            "Alaska": {"left": -131, "top": 25, "width": 15},
+            "Hawaii": {"left": -110, "top": 28, "width": 5},
+            "Puerto Rico": {"left": -76, "top": 26, "width": 2},
+        },
+    )
+options2 = {...}
+st_echarts(options, map=map)
 
  
 #-- Create three columns
