@@ -9,7 +9,9 @@ from streamlit_echarts import st_echarts
 import json
 import js2py
 
-
+with st.sidebar:
+    st.write(greeting="hello")
+    
 options1 = {
     "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
     "legend": {
@@ -137,9 +139,7 @@ seriesList = [
         "name": country,
         "endLabel": {
             "show": True,
-            "formatter": "JsCode(
-                "function (params) { return params.value[3] + ': ' + params.value[0];}"
-            ).js_code",
+            "formatter": js2py.eval_js("function (params) { return params.value[3] + ': ' + params.value[0];}"),
         },
         "labelLayout": {"moveOverlap": "shiftY"},
         "emphasis": {"focus": "series"},
