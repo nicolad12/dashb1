@@ -131,9 +131,8 @@ datasetWithFilters = [
     for country in countries
 ]
 
-squareofNum = "function f(x) {return x*x;}"
-
-result = js2py.eval_js(squareofNum)
+endlabel = "function (params) { return params.value[3] + ': ' + params.value[0];}"
+result = js2py.eval_js(endlabel)
 
 seriesList = [
     {
@@ -143,7 +142,7 @@ seriesList = [
         "name": country,
         "endLabel": {
             "show": True,
-            "formatter": js2py.eval_js("function (params) { return params.value[3] + ': ' + params.value[0];}"),
+            "formatter": result,
         },
         "labelLayout": {"moveOverlap": "shiftY"},
         "emphasis": {"focus": "series"},
