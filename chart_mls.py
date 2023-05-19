@@ -139,7 +139,7 @@ seriesList = [
         "name": country,
         "endLabel": {
             "show": True,
-            "formatter": "function (params) { return params.value[3] + ': ' + params.value[0];}".to_js,
+            "formatter": country
         },
         "labelLayout": {"moveOverlap": "shiftY"},
         "emphasis": {"focus": "series"},
