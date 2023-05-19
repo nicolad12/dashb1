@@ -118,73 +118,8 @@ option3 = {
       "fontSize": 20,
       "color": '#999'
     },
-    "range": ['2017-02', '2017-03-31']
-  },
-  "visualMap": {
-    "min": 0,
-    "max": 1000,
-    "type": 'piecewise',
-    "left": 'center',
-    "bottom": 20,
-    "inRange": {
-      "color": ['#5291FF', '#C7DBFF']
-    },
-    "seriesIndex": [1],
-    "orient": 'horizontal'
-  },
-  "series": [
-    {
-      "type": 'graph',
-      "edgeSymbol": ['none', 'arrow'],
-      "coordinateSystem": 'calendar',
-      "links": [
-                {
-                    "source": 0,
-                    "target": 1,
-                    "symbolSize": [5, 20],
-                    "label": {"show": True},
-                    "lineStyle": {"width": 5, "curveness": 0.2},
-                },
-                {
-                    "source": "2",
-                    "target": "1",
-                    "label": {"show": True},
-                    "lineStyle": {"curveness": 0.2},
-                },
-                {"source": "1", "target": "3"},
-                {"source": "2", "target": "3"},
-                {"source": "2", "target": "4"},
-                {"source": "1", "target": "4"},
-            ],
-      "symbolSize": 15,
-      "calendarIndex": 0,
-      "itemStyle": {
-        "color": 'yellow',
-        "shadowBlur": 9,
-        "shadowOffsetX": 1.5,
-        "shadowOffsetY": 3,
-        "shadowColor": '#555'
-      },
-      "lineStyle": {
-        "color": '#D10E00',
-        "width": 1,
-        "opacity": 1
-      },
-      "data": [
-                {"name": "1", "x": 300, "y": 300},
-                {"name": "2", "x": 800, "y": 300},
-                {"name": "3", "x": 550, "y": 100},
-                {"name": "4", "x": 550, "y": 500},
-            ],
-      "z": 20
-    },
-    {
-      "type": 'heatmap',
-      "coordinateSystem": 'calendar',
-      "data": ['2023-02-01', '2023-02-02','2023-02-03','2023-02-04','2023-02-05','2023-02-06']
-    }
-  ]
-}
+    "range": ['2023-02-01', '2023-03-31']
+  }
 
 st_echarts(option3, height="640px", key="echarts") 
 
