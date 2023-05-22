@@ -177,11 +177,9 @@ CHOICES = {1: "Jan", 2: "Feb", 3: "March", 4:"April", 5: "May", 6:"June",7:"July
 def format_func(option):
     return CHOICES[option]
 
-with col1:
-     month_choice = st.selectbox(
+with st.sidebar:
+    month_choice = st.selectbox(
     'Select Month', options=list(CHOICES.keys()), format_func=format_func)
-
-with col2:
     year_choice = st.selectbox(
     'Select Year', options=[2022,2023,2024])
 
