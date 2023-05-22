@@ -181,6 +181,11 @@ with col1:
      month_choice = st.selectbox(
     'Select Month', options=list(CHOICES.keys()), format_func=format_func)
 
+with col2:
+    year_choice = st.selectbox(
+    'Select Year', options=[2022,2023,2024])
+
+       
 # with col1:
 #    month_choice = st.slider(
 #        "What month would you like to view?",
@@ -189,16 +194,14 @@ with col1:
 #        step=1,
 #        value=6,
 #    )   
-
-
-with col2:
-    year_choice = st.slider(
-        "What year would you like to view?",
-        min_value=2022,
-        max_value=2026,
-        step=1,
-        value=2022,
-    )
+# with col2:
+#    year_choice = st.slider(
+#        "What year would you like to view?",
+#        min_value=2022,
+#        max_value=2026,
+#        step=1,
+#        value=2022,
+#    )
 
 @st.cache_data(ttl=600)
 def load_data(sheets_url):
