@@ -173,7 +173,7 @@ st.title("Project #1 - Key Milestones Chart")
 col1, col2 = st.columns([30, 30])
 
 with col1:
-month_choice = st.selectbox(
+     month_choice = st.selectbox(
     'Select Month',
     ('June-22', 'July-22', 'Aug-22'))
 
