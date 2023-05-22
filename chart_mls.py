@@ -8,9 +8,6 @@ from st_aggrid import AgGrid, ColumnsAutoSizeMode
 from streamlit_echarts import st_echarts, JsCode
 import json
 
-with st.sidebar:
-    st.write("hello")
-    
 options1 = {
     "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
     "legend": {
