@@ -172,10 +172,14 @@ st_echarts(options3, height="600px")
 st.title("Project #1 - Key Milestones Chart")
 col1, col2 = st.columns([30, 30])
 
+CHOICES = {1: "Jan", 2: "Feb", 3: "March", 4:"April", 5: "May"; 6:"June",7:"July"}
+
+def format_func(option):
+    return CHOICES[option]
+
 with col1:
      month_choice = st.selectbox(
-    'Select Month',
-    ('June-22', 'July-22', 'Aug-22'))
+    'Select Month', options=list(CHOICES.keys()), format_func=format_func)
 
 # with col1:
 #    month_choice = st.slider(
