@@ -171,14 +171,22 @@ st_echarts(options3, height="600px")
 #-- Create three columns
 st.title("Project #1 - Key Milestones Chart")
 col1, col2 = st.columns([30, 30])
+
 with col1:
-    month_choice = st.slider(
-        "What month would you like to view?",
-        min_value=6,
-        max_value=12,
-        step=1,
-        value=6,
-    )   
+month_choice = st.selectbox(
+    'Select Month',
+    ('June-22', 'July-22', 'Aug-22'))
+
+# with col1:
+#    month_choice = st.slider(
+#        "What month would you like to view?",
+#        min_value=6,
+#        max_value=12,
+#        step=1,
+#        value=6,
+#    )   
+
+
 with col2:
     year_choice = st.slider(
         "What year would you like to view?",
